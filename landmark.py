@@ -28,5 +28,6 @@ if __name__ == "__main__":
                 cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
 
         cv2.imshow('face_landmark', img)
-        cv2.waitKey(1)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 cv2.destroyAllWindows()
