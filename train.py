@@ -10,7 +10,7 @@ known_faces = [known_face_names, known_face_encodings]
 
 def show_usage():
     print('[!] Usage: python train.py')
-    print('\t train.py [Face_File] [Face Name] [Trained File] [init/continue]')
+    print('\t train.py [Face_File] [Face Name] [Trained File] [init/add]')
 
 if __name__ == "__main__":
     
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     predictor = dlib.shape_predictor("model/shape_predictor_5_face_landmarks.dat")
     face_encoder = dlib.face_recognition_model_v1("model/dlib_face_recognition_resnet_model_v1.dat")
 
-    if sys.argv[4] == "continue":
+    if sys.argv[4] == "add":
         with open(sys.argv[3], "rb") as f :
             known_faces = pickle.load(f)
 
