@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     face_names = []
     face_records = []
-    threshold = 0.55
+    threshold = 0.5
 
     cap = cv2.VideoCapture(0)
     #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 400)
