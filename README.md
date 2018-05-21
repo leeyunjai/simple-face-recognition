@@ -1,7 +1,7 @@
 # Test Environment
 - Raspberrypi 3B (Jessie) or Ubuntu 16.04/17.10
 - python 3.4~ / dlib 19.10 / opencv 3.3~ (I think the slightly lower version will not matter.)
-- Test image got from google free images.
+- I got test images from google free images.
 - ageitgey/face_recognition and pyimagesearch.com (Reference)
 
 # File list
