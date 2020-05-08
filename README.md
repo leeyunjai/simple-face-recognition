@@ -9,3 +9,6 @@
 - python3 train.py [Face_File] [Face Name] [Trained File] [init/add] # Train face - name (init - reset / add - append)
 - python3 landmark.py # Demo face landmark detection
 - python3 demo.py [Trained File] # Demo face recognition
+
+![demo1](./img1.jpg)
+![demo2](./img2.jpg)
