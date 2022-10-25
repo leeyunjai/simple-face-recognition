@@ -1,17 +1,14 @@
 import pickle
-import sys
-def show_usage():
-    print('[!] Usage: python dbtest.py')
-    print('\t dbtest.py [Trained File]')
+import argparse
 
 if __name__ == "__main__":
-    
-    if len(sys.argv) != 2:
-        show_usage()
-        exit() 
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--record', help='trained file', default='pretrained/record')
+  args = parser.parse_args()
 
-    with open(sys.argv[1], "rb") as f :
-        known_faces = pickle.load(f)
-        
-    for known_face_name in known_faces[0]:
-        print(known_face_name)
+  with open(args.record, "rb") as f:
+    known_faces = pickle.load(f)
+
+    for _name, _value in zip(known_faces[0], known_faces[1]):
+      print(_name, _value)
+
